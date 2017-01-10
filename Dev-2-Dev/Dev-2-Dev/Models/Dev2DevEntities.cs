@@ -20,6 +20,8 @@ namespace Dev_2_Dev.Models
 
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Skill> Skills { get; set; }
+        public virtual DbSet<Mentor> MentorSkills { get; set; }
+        public virtual DbSet<Mentee> MenteeSkills { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

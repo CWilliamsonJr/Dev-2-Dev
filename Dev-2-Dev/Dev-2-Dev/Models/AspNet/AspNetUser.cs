@@ -8,6 +8,10 @@ namespace Dev_2_Dev.Models
 
     public partial class AspNetUser
     {
+        public AspNetUser()
+        {
+            Users = new HashSet<User>();
+        }
         public string Id { get; set; }
 
         [StringLength(256)]
@@ -34,5 +38,7 @@ namespace Dev_2_Dev.Models
         [Required]
         [StringLength(256)]
         public string UserName { get; set; }
+
+        public virtual ICollection<User> Users { get; set; }
     }
 }
