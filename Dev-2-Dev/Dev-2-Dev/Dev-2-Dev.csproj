@@ -191,6 +191,10 @@
     <Compile Include="Migrations\201701100955303_AddedMenteeTable.Designer.cs">
       <DependentUpon>201701100955303_AddedMenteeTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201701102049443_AddedMessageTable.cs" />
+    <Compile Include="Migrations\201701102049443_AddedMessageTable.Designer.cs">
+      <DependentUpon>201701102049443_AddedMessageTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AspNet\AspNetRole.cs" />
@@ -203,6 +207,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Mentee.cs" />
     <Compile Include="Models\Mentor.cs" />
+    <Compile Include="Models\Message.cs" />
     <Compile Include="Models\Skill.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -287,6 +292,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201701100955303_AddedMenteeTable.resx">
       <DependentUpon>201701100955303_AddedMenteeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701102049443_AddedMessageTable.resx">
+      <DependentUpon>201701102049443_AddedMessageTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
