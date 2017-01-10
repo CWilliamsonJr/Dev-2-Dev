@@ -52,6 +52,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -173,9 +175,26 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201701100818223_AddedUserTable.cs" />
+    <Compile Include="Migrations\201701100818223_AddedUserTable.Designer.cs">
+      <DependentUpon>201701100818223_AddedUserTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701100847085_AddedSkills.cs" />
+    <Compile Include="Migrations\201701100847085_AddedSkills.Designer.cs">
+      <DependentUpon>201701100847085_AddedSkills.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AspNet\AspNetRole.cs" />
+    <Compile Include="Models\AspNet\AspNetUser.cs" />
+    <Compile Include="Models\AspNet\AspNetUserClaim.cs" />
+    <Compile Include="Models\AspNet\AspNetUserLogin.cs" />
+    <Compile Include="Models\AspNet\AspNetUserRole.cs" />
+    <Compile Include="Models\Dev2DevEntities.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Skill.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -245,6 +264,14 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201701100818223_AddedUserTable.resx">
+      <DependentUpon>201701100818223_AddedUserTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701100847085_AddedSkills.resx">
+      <DependentUpon>201701100847085_AddedSkills.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
