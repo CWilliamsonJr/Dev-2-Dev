@@ -187,6 +187,10 @@
     <Compile Include="Migrations\201701121816559_addedMentorAndMeeteeRelatedTables.Designer.cs">
       <DependentUpon>201701121816559_addedMentorAndMeeteeRelatedTables.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201701121835386_addedTutorTable.cs" />
+    <Compile Include="Migrations\201701121835386_addedTutorTable.Designer.cs">
+      <DependentUpon>201701121835386_addedTutorTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AspNet\AspNetRole.cs" />
@@ -203,6 +207,7 @@
     <Compile Include="Models\MentorSkill.cs" />
     <Compile Include="Models\Message.cs" />
     <Compile Include="Models\Skill.cs" />
+    <Compile Include="Models\Tutor.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -283,6 +288,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201701121816559_addedMentorAndMeeteeRelatedTables.resx">
       <DependentUpon>201701121816559_addedMentorAndMeeteeRelatedTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701121835386_addedTutorTable.resx">
+      <DependentUpon>201701121835386_addedTutorTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

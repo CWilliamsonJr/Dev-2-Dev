@@ -8,12 +8,13 @@ using System.Web;
 
 namespace Dev_2_Dev.Models
 {
-    [Table("Mentee")]
+    [Table("Mentees")]
     public class Mentee
     {
         public Mentee()
         {
             MenteeSkill = new HashSet<MenteeSkill>();
+            Tutor = new HashSet<Tutor>();
         }
 
         [Key]
@@ -25,5 +26,6 @@ namespace Dev_2_Dev.Models
 
         
         public virtual ICollection<MenteeSkill> MenteeSkill { get; set; }
+        public virtual ICollection<Tutor> Tutor { get; set; }
     }
 }

@@ -8,12 +8,13 @@ using System.Web;
 
 namespace Dev_2_Dev.Models
 {
-    [Table("Mentor")]
+    [Table("Mentors")]
     public class Mentor
     {
         public Mentor()
         {
-            MentorSkills = new HashSet<MentorSkill>();
+            MentorSkill = new HashSet<MentorSkill>();
+            Tutor = new HashSet<Tutor>();
         }
 
         [Key]
@@ -24,6 +25,7 @@ namespace Dev_2_Dev.Models
         [ForeignKey("MentorUserId")]
         public virtual User User { get; set; }
 
-        public virtual ICollection<MentorSkill> MentorSkills { get; set; }
+        public virtual ICollection<MentorSkill> MentorSkill { get; set; }
+        public virtual ICollection<Tutor> Tutor { get; set; }
     }
 }
