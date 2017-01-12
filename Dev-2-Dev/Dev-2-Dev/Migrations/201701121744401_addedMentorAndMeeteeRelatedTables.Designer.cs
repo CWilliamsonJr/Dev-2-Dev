@@ -7,13 +7,13 @@ namespace Dev_2_Dev.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class AddedMessageTable : IMigrationMetadata
+    public sealed partial class addedMentorAndMeeteeRelatedTables : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddedMessageTable));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(addedMentorAndMeeteeRelatedTables));
         
         string IMigrationMetadata.Id
         {
-            get { return "201701102049443_AddedMessageTable"; }
+            get { return "201701121744401_addedMentorAndMeeteeRelatedTables"; }
         }
         
         string IMigrationMetadata.Source

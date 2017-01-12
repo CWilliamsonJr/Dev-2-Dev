@@ -4,26 +4,26 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
-// ReSharper disable VirtualMemberCallInConstructor
 
 namespace Dev_2_Dev.Models
 {
-    [Table("MentorList")]
-    public class Mentor
+    public class MenteeSkill
     {
-        public Mentor()
+        public MenteeSkill()
         {
-            MentorSkills = new HashSet<MentorSkill>();
+            
         }
 
         [Key]
         public int MentorId { get; set; }
-
+        
+        public int MentorSkillId { get; set; }
         public int MentorUserId { get; set; }
 
-        [ForeignKey("MentorUserId")]
-        public virtual User User { get; set; }
+        [ForeignKey("MentorSkillId")]
+        public virtual Skill Skill { get; set; }
 
-        public virtual ICollection<MentorSkill> MentorSkills { get; set; }
+        [ForeignKey("MentorUserId")]
+        public virtual Mentor Mentor { get; set; }
     }
 }

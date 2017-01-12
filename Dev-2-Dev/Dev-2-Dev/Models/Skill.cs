@@ -12,8 +12,8 @@ namespace Dev_2_Dev.Models
     {
         public Skill()
         {
-            MentorSkills = new HashSet<Mentor>();
-            MenteeSkills = new HashSet<Mentee>();
+            MentorSkills = new HashSet<MentorSkill>();
+            MenteeSkills = new HashSet<MenteeSkill>();
         }
 
         [Key]
@@ -22,7 +22,7 @@ namespace Dev_2_Dev.Models
         [Column("Skill")]
         public string Skill1 { get; set; }
 
-        public virtual ICollection<Mentor> MentorSkills { get; set; }
-        public virtual ICollection<Mentee> MenteeSkills { get; set; }
+        public virtual ICollection<MentorSkill> MentorSkills { get; set; }
+        public virtual ICollection<MenteeSkill> MenteeSkills { get; set; }
     }
 }

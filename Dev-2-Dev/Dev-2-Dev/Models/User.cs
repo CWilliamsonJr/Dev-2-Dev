@@ -12,8 +12,8 @@ namespace Dev_2_Dev.Models
     {
         public User()
         {
-            MentorSkills = new HashSet<Mentor>();
-            MenteeSkills = new HashSet<Mentee>();
+            Mentors = new HashSet<Mentor>();
+            Mentees = new HashSet<Mentee>();
             ToUserId = new HashSet<Message>();
             FromUserId = new HashSet<Message>();
         }
@@ -34,8 +34,8 @@ namespace Dev_2_Dev.Models
         public string LastName { get; set; }
 
         public virtual AspNetUser AspNetUser { get; set; }
-        public virtual ICollection<Mentor> MentorSkills { get; set; }
-        public virtual ICollection<Mentee> MenteeSkills { get; set; }
+        public virtual ICollection<Mentor> Mentors { get; set; }
+        public virtual ICollection<Mentee> Mentees { get; set; }
 
         [InverseProperty("ToUser")]
         public virtual ICollection<Message> ToUserId { get; set; }

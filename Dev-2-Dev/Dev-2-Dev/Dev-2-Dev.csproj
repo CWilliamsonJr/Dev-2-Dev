@@ -183,17 +183,9 @@
     <Compile Include="Migrations\201701100847085_AddedSkills.Designer.cs">
       <DependentUpon>201701100847085_AddedSkills.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201701100934592_AddedMentorSkills.cs" />
-    <Compile Include="Migrations\201701100934592_AddedMentorSkills.Designer.cs">
-      <DependentUpon>201701100934592_AddedMentorSkills.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201701100955303_AddedMenteeTable.cs" />
-    <Compile Include="Migrations\201701100955303_AddedMenteeTable.Designer.cs">
-      <DependentUpon>201701100955303_AddedMenteeTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201701102049443_AddedMessageTable.cs" />
-    <Compile Include="Migrations\201701102049443_AddedMessageTable.Designer.cs">
-      <DependentUpon>201701102049443_AddedMessageTable.cs</DependentUpon>
+    <Compile Include="Migrations\201701121744401_addedMentorAndMeeteeRelatedTables.cs" />
+    <Compile Include="Migrations\201701121744401_addedMentorAndMeeteeRelatedTables.Designer.cs">
+      <DependentUpon>201701121744401_addedMentorAndMeeteeRelatedTables.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -206,7 +198,9 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Mentee.cs" />
+    <Compile Include="Models\MenteeSkill.cs" />
     <Compile Include="Models\Mentor.cs" />
+    <Compile Include="Models\MentorSkill.cs" />
     <Compile Include="Models\Message.cs" />
     <Compile Include="Models\Skill.cs" />
     <Compile Include="Models\User.cs" />
@@ -287,14 +281,8 @@
     <EmbeddedResource Include="Migrations\201701100847085_AddedSkills.resx">
       <DependentUpon>201701100847085_AddedSkills.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201701100934592_AddedMentorSkills.resx">
-      <DependentUpon>201701100934592_AddedMentorSkills.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201701100955303_AddedMenteeTable.resx">
-      <DependentUpon>201701100955303_AddedMenteeTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201701102049443_AddedMessageTable.resx">
-      <DependentUpon>201701102049443_AddedMessageTable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201701121744401_addedMentorAndMeeteeRelatedTables.resx">
+      <DependentUpon>201701121744401_addedMentorAndMeeteeRelatedTables.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

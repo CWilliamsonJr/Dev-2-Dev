@@ -10,6 +10,7 @@ namespace Dev_2_Dev.Models
         public Dev2DevEntities()
             : base("name=Dev2DevEntities")
         {
+            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<Dev2DevEntities>());
         }
 
         public virtual DbSet<AspNetRole> AspNetRoles { get; set; }
@@ -20,8 +21,10 @@ namespace Dev_2_Dev.Models
 
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Skill> Skills { get; set; }
-        public virtual DbSet<Mentor> MentorSkills { get; set; }
-        public virtual DbSet<Mentee> MenteeSkills { get; set; }
+        public virtual DbSet<MentorSkill> MentorSkills { get; set; }
+        public virtual DbSet<MenteeSkill> MenteeSkills { get; set; }
+        public virtual DbSet<Mentor> Mentors { get; set; }
+        public virtual DbSet<Mentee> Mentees { get; set; }
         public virtual DbSet<Message> Messages { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
