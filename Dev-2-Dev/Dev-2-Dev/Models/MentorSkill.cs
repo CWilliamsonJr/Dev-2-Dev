@@ -7,9 +7,9 @@ using System.Web;
 
 namespace Dev_2_Dev.Models
 {
-    public class MenteeSkill
+    public class MentorSkill
     {
-        public MenteeSkill()
+        public MentorSkill()
         {
             
         }

@@ -8,7 +8,7 @@ using System.Web;
 
 namespace Dev_2_Dev.Models
 {
-    [Table("MentorList")]
+    [Table("Mentor")]
     public class Mentor
     {
         public Mentor()

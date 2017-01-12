@@ -13,7 +13,7 @@ namespace Dev_2_Dev.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201701121744401_addedMentorAndMeeteeRelatedTables"; }
+            get { return "201701121816559_addedMentorAndMeeteeRelatedTables"; }
         }
         
         string IMigrationMetadata.Source

@@ -8,7 +8,7 @@ using System.Web;
 
 namespace Dev_2_Dev.Models
 {
-    [Table("MenteeList")]
+    [Table("Mentee")]
     public class Mentee
     {
         public Mentee()
@@ -20,8 +20,10 @@ namespace Dev_2_Dev.Models
         public int MenteeId { get; set; }
         public int MenteeUserId { get; set; }
 
+        [ForeignKey("MenteeUserId")]
         public virtual User User { get; set; }
 
+        
         public virtual ICollection<MenteeSkill> MenteeSkill { get; set; }
     }
 }
