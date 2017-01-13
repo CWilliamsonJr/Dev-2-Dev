@@ -33,6 +33,18 @@ namespace Dev_2_Dev.Models
         [StringLength(100)]
         public string LastName { get; set; }
 
+        [StringLength(50)]
+        public string Twitter { get; set; }
+
+        [StringLength(50)]
+        public string Linkedin { get; set; }
+
+        [StringLength(100)]
+        public string Facebook { get; set; }
+
+        [StringLength(500)]
+        public string AboutMe { get; set; }
+
         public virtual AspNetUser AspNetUser { get; set; }
         public virtual ICollection<Mentor> Mentors { get; set; }
         public virtual ICollection<Mentee> Mentees { get; set; }

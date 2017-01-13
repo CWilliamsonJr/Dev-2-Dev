@@ -10,14 +10,10 @@ namespace Dev_2_Dev.Models
         public Dev2DevEntities()
             : base("name=Dev2DevEntities")
         {
-            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<Dev2DevEntities>());
+            Database.SetInitializer(new CreateDatabaseIfNotExists<Dev2DevEntities>());
         }
 
-        public virtual DbSet<AspNetRole> AspNetRoles { get; set; }
-        public virtual DbSet<AspNetUserClaim> AspNetUserClaims { get; set; }
-        public virtual DbSet<AspNetUserLogin> AspNetUserLogins { get; set; }
-        public virtual DbSet<AspNetUserRole> AspNetUserRoles { get; set; }
-        public virtual DbSet<AspNetUser> AspNetUsers { get; set; }
+       
 
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Skill> Skills { get; set; }
@@ -25,7 +21,14 @@ namespace Dev_2_Dev.Models
         public virtual DbSet<MenteeSkill> MenteeSkills { get; set; }
         public virtual DbSet<Mentor> Mentors { get; set; }
         public virtual DbSet<Mentee> Mentees { get; set; }
+        public virtual DbSet<Tutor> Tutors { get; set; }
         public virtual DbSet<Message> Messages { get; set; }
+
+        public virtual DbSet<AspNetRole> AspNetRoles { get; set; }
+        public virtual DbSet<AspNetUserClaim> AspNetUserClaims { get; set; }
+        public virtual DbSet<AspNetUserLogin> AspNetUserLogins { get; set; }
+        public virtual DbSet<AspNetUserRole> AspNetUserRoles { get; set; }
+        public virtual DbSet<AspNetUser> AspNetUsers { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -34,5 +37,7 @@ namespace Dev_2_Dev.Models
                 .WithRequired(e => e.AspNetRole)
                 .HasForeignKey(e => e.RoleId);
         }
+
+        //public System.Data.Entity.DbSet<Dev_2_Dev.ViewModels.UserViewModel> UserViewModels { get; set; }
     }
 }
